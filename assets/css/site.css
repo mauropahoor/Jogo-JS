@@ -29,11 +29,13 @@ footer{
 @media screen and (max-width: 600px) {
     header{
         height: 10%;
+        font-size: 1.5rem;
     }
     .content{
         font-size: 1.3rem;
         background-color: #012a4a;
         color: white;
         text-align: center;
+        height: 100%;
     }
 }
