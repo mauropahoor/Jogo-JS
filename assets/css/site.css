@@ -28,13 +28,10 @@ footer{
 }
 @media screen and (max-width: 600px) {
     header{
-        height: 5%;
+        height: 10%;
     }
     .content{
         font-size: 1.3rem;
-        width: 200px;
-        margin:0 auto;
-        margin-bottom: 10px;
         background-color: #012a4a;
         color: white;
         text-align: center;
