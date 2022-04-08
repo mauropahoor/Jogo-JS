@@ -1,0 +1,20 @@
+.centralize{ text-align: center;}
+.bold{ font-weight: bold;}
+header{
+    background-color: #332940;
+    color: #FFFFFF;
+    text-align: center;
+}
+body{
+    background-color: #121212;
+}
+footer{
+    background-color: #332940;
+    color: white;
+    text-align: center;
+}
+.content{
+    background-color: #242424;
+    color: white;
+    text-align: center;
+}
