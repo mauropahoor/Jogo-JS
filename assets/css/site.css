@@ -31,7 +31,9 @@ footer{
         height: 5%;
     }
     .content{
-        margin: 0% 5% 0% 5%;
+        width: 200px;
+        margin:0 auto;
+        margin-bottom: 10px;
         background-color: #012a4a;
         color: white;
         text-align: center;
