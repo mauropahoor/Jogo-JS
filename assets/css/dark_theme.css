@@ -1,7 +1,10 @@
-.centralize{ text-align: center;}
-.bold{ font-weight: bold;}
 header{
     background-color: #332940;
+    color: #FFFFFF;
+    text-align: center;
+}
+header.secondary{
+    background-color: #000000;
     color: #FFFFFF;
     text-align: center;
 }
@@ -13,7 +16,7 @@ footer{
     color: white;
     text-align: center;
 }
-.content{
+.content.style{
     background-color: #242424;
     color: white;
     text-align: center;

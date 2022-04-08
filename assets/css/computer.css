@@ -2,6 +2,13 @@ header{
     height: 10%;
     font-size: 48px;
 }
+header.secondary{
+    height: 5%;
+    font-size: 14px;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+}
 .content{
     margin: 0% 30% 0% 30%;
     height: 100%;
