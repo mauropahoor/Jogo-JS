@@ -1,0 +1,11 @@
+header{
+    height: 10%;
+    font-size: 48px;
+}
+.content{
+    margin: 0% 30% 0% 30%;
+    background-color: #012a4a;
+    color: white;
+    text-align: center;
+    height: 100%;
+}
