@@ -1,7 +1,15 @@
 .centralize{ text-align: center;}
 .bold{ font-weight: bold;}
-.left{ text-align: left;}
+.left{     
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: left;
+}
 a.button{
     color: #fff;
     text-decoration: none;  
+}
+.fit{
+    height: 100%;
 }
