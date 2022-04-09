@@ -6,9 +6,13 @@ header.secondary{
     font-size: 2rem;
 }
 .content{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     height: auto;
 }
+h1,h2,h3,h4,h5,h6{
+    font-size: 3.2rem;
+}
 .btn{
-    height: auto;
+    padding: 0.938rem 2rem;
+    font-size: 2rem;
 }
