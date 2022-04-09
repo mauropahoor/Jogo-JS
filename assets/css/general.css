@@ -1,13 +1,11 @@
 .centralize{ text-align: center;}
 .bold{ font-weight: bold;}
-.left{     
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    text-align: left;
-}
 a.button{
     color: #fff;
+    text-decoration: none;  
+}
+a.button:hover{
+    color: rgb(134, 134, 134);
     text-decoration: none;  
 }
 .fit{
