@@ -15,7 +15,6 @@ function game(id){
             document.getElementById('round').setAttribute('value', round += 1);
         }
     }
-    let tie = 0;
     let matrix_size = 3;
     let position = new Array(matrix_size); //Create matrix with the moves
 
@@ -26,39 +25,33 @@ function game(id){
         for(j = 0; j < matrix_size; j++){
             let id = i.toString() + j.toString(); //Method to identify each ID in HTML and create an matrice with the moves
             position[i][j] = document.getElementById(id).getAttribute("value");
-            if(position[i][j] == 0) //Check the number of empty spaces in the game 
-                tie++;
         }
     }
-    if(tie == 0) //If there isn't any empty space, it's a tie
-        winner.innerHTML = "Deu velha!";
-    else{ //If still have empty spaces, check if there is a winner
-        for ( i = 0; i < matrix_size; i++) {
-            for (j = 0; j < matrix_size; j++){
-                if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
-                    if(position[i][j] == 'x')
-                        winner.innerHTML = "O vencedor foi o X!";
-                    else
-                        winner.innerHTML = "O vencedor foi o O!";
-                }
-                else if((position[i][j] == 'x' && position[i + 1][j] == 'x' && position[i + 2][j] == 'x') || (position[i][j] == 'o' && position[i + 1][j] == 'o' && position[i + 2][j] == 'o')){
-                    if(position[i][j] == 'x')
-                        winner.innerHTML = "O vencedor foi o X!";
-                    else
-                        winner.innerHTML = "O vencedor foi o O!";
-                }
-                else if((position[i][j] == 'x' && position[i + 1][j + 1] == 'x' && position[i + 2][j + 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j + 1] == 'o' && position[i + 2][j + 2] == 'o')){
-                    if(position[i][j] == 'x')
-                        winner.innerHTML = "O vencedor foi o X!";
-                    else
-                        winner.innerHTML = "O vencedor foi o O!";
-                }
-                else if((position[i][j] == 'x' && position[i + 1][j - 1] == 'x' && position[i + 2][j - 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j - 1] == 'o' && position[i + 2][j - 2] == 'o')){
-                    if(position[i][j] == 'x')
-                        winner.innerHTML = "O vencedor foi o X!";
-                    else
-                        winner.innerHTML = "O vencedor foi o O!";
-                }
+    for ( i = 0; i < matrix_size; i++) {
+        for (j = 0; j < matrix_size; j++){
+            if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
+                if(position[i][j] == 'x')
+                    winner.innerHTML = "O vencedor foi o X!";
+                else
+                    winner.innerHTML = "O vencedor foi o O!";
+            }
+            else if((position[i][j] == 'x' && position[i + 1][j] == 'x' && position[i + 2][j] == 'x') || (position[i][j] == 'o' && position[i + 1][j] == 'o' && position[i + 2][j] == 'o')){
+                if(position[i][j] == 'x')
+                    winner.innerHTML = "O vencedor foi o X!";
+                else
+                    winner.innerHTML = "O vencedor foi o O!";
+            }
+            else if((position[i][j] == 'x' && position[i + 1][j + 1] == 'x' && position[i + 2][j + 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j + 1] == 'o' && position[i + 2][j + 2] == 'o')){
+                if(position[i][j] == 'x')
+                    winner.innerHTML = "O vencedor foi o X!";
+                else
+                    winner.innerHTML = "O vencedor foi o O!";
+            }
+            else if((position[i][j] == 'x' && position[i + 1][j - 1] == 'x' && position[i + 2][j - 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j - 1] == 'o' && position[i + 2][j - 2] == 'o')){
+                if(position[i][j] == 'x')
+                    winner.innerHTML = "O vencedor foi o X!";
+                else
+                    winner.innerHTML = "O vencedor foi o O!";
             }
         }
     }
