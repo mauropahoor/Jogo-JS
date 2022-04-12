@@ -31,6 +31,7 @@ function game(id){
     for ( i = 0; i < matrix_size; i++) {
         for (j = 0; j < matrix_size; j++){
             //Check if O or X win
+
             if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
                 if(position[i][j] == 'x')
                     winner.innerHTML = "O vencedor foi o X!";
@@ -57,15 +58,6 @@ function game(id){
             }
         }
     }
-    let tie = 0;
-    for ( i = 0; i < matrix_size; i++) {
-        for (j = 0; j < matrix_size; j++){
-            if(position[i][j] == 'x' || position[i][j] == 'o')
-                tie++; 
-        }
-    }
-    if(tie == 9)
-        alert("VAMO");
 }
 function restart(){
     let game_size = 3;
