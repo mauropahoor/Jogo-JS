@@ -1,4 +1,6 @@
-.centralize{ text-align: center;}
+.centralize{ 
+    text-align: center;
+}
 .bold{ font-weight: bold;}
 a.button{
     color: #fff;
@@ -10,4 +12,8 @@ a.button:hover{
 }
 .fit{
     height: 100%;
+}
+table.center {
+    margin: auto;
+    width: auto;
 }

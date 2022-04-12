@@ -1,12 +1,10 @@
 header{
     background-color: #01497c;
     color: white;
-    text-align: center;
 }
 header.secondary{
     background-color: #000000;
     color: #FFFFFF;
-    text-align: center;
 }
 body{
     background-color: #a9d6e5;
@@ -14,11 +12,9 @@ body{
 footer{
     background-color: #01497c;
     color: white;
-    text-align: center;
 }
 .content.style{
     background-color: #012a4a;
     color: white;
-    text-align: center;
 }
 .fit.style{background-color: #022642}
