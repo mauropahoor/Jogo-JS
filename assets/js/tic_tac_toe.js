@@ -27,7 +27,7 @@ function game(id){
             position[i][j] = document.getElementById(id).getAttribute("value");
         }
     }
-    let empty_space = 0;
+    let empty_space = 0; //Check if is a tie
     for (i = 0; i < matrix_size; i++){
         for (j = 0; j < matrix_size; j++){
             if(position[i][j] != '0'){
@@ -38,6 +38,24 @@ function game(id){
     if(empty_space == 9){
         winner.innerHTML = "Deu velha!";
     }
+    check_winner(); //Check if have a winner
+}
+function restart(){
+    let game_size = 3;
+    let winner = document.getElementById("winner");
+    let round = document.getElementById("round");
+    winner.innerHTML = ""; //Reset the winning text
+    round.setAttribute("value", '0'); //Reset round
+
+    for (i = 0; i < game_size; i++){
+        for(j = 0; j < game_size; j++){
+            let id = i.toString() + j.toString();
+            document.getElementById(id).setAttribute('value', '0'); //Reset the value in matrice and the image
+            document.getElementById(id).setAttribute('src', 'assets/img/empty.png');
+        }
+    }
+}
+function check_winner(){
     for ( i = 0, j = 0; i < matrix_size; i++) {
         if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
 
@@ -67,20 +85,5 @@ function game(id){
             winner.innerHTML = "O vencedor foi o X!";
         else
             winner.innerHTML = "O vencedor foi o O!";
-    }
-}
-function restart(){
-    let game_size = 3;
-    let winner = document.getElementById("winner");
-    let round = document.getElementById("round");
-    winner.innerHTML = ""; //Reset the winning text
-    round.setAttribute("value", '0'); //Reset round
-
-    for (i = 0; i < game_size; i++){
-        for(j = 0; j < game_size; j++){
-            let id = i.toString() + j.toString();
-            document.getElementById(id).setAttribute('value', '0'); //Reset the value in matrice and the image
-            document.getElementById(id).setAttribute('src', 'assets/img/empty.png');
-        }
     }
 }
