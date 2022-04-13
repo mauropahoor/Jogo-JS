@@ -27,33 +27,46 @@ function game(id){
             position[i][j] = document.getElementById(id).getAttribute("value");
         }
     }
-    for ( i = 0; i < matrix_size; i++) {
+    let empty_space = 0;
+    for (i = 0; i < matrix_size; i++){
         for (j = 0; j < matrix_size; j++){
-            if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
-                if(position[i][j] == 'x')
-                    winner.innerHTML = "O vencedor foi o X!";
-                else
-                    winner.innerHTML = "O vencedor foi o O!";
-            }
-            else if((position[i][j] == 'x' && position[i + 1][j] == 'x' && position[i + 2][j] == 'x') || (position[i][j] == 'o' && position[i + 1][j] == 'o' && position[i + 2][j] == 'o')){
-                if(position[i][j] == 'x')
-                    winner.innerHTML = "O vencedor foi o X!";
-                else
-                    winner.innerHTML = "O vencedor foi o O!";
-            }
-            else if((position[i][j] == 'x' && position[i + 1][j + 1] == 'x' && position[i + 2][j + 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j + 1] == 'o' && position[i + 2][j + 2] == 'o')){
-                if(position[i][j] == 'x')
-                    winner.innerHTML = "O vencedor foi o X!";
-                else
-                    winner.innerHTML = "O vencedor foi o O!";
-            }
-            else if((position[i][j] == 'x' && position[i + 1][j - 1] == 'x' && position[i + 2][j - 2] == 'x') || (position[i][j] == 'o' && position[i + 1][j - 1] == 'o' && position[i + 2][j - 2] == 'o')){
-                if(position[i][j] == 'x')
-                    winner.innerHTML = "O vencedor foi o X!";
-                else
-                    winner.innerHTML = "O vencedor foi o O!";
+            if(position[i][j] != '0'){
+                empty_space++;
             }
         }
+    }
+    if(empty_space == 9){
+        winner.innerHTML = "Deu velha!";
+    }
+    for ( i = 0, j = 0; i < matrix_size; i++) {
+        if((position[i][j] == 'x' && position[i][j + 1] == 'x' && position[i][j + 2] == 'x') || (position[i][j] == 'o' && position[i][j + 1] == 'o' && position[i][j + 2] == 'o')){
+
+            if(position[i][j] == 'x')
+                winner.innerHTML = "O vencedor foi o X!";
+            else
+                winner.innerHTML = "O vencedor foi o O!";
+        }
+    }
+    for ( i = 0, j = 0; j < matrix_size; j++) {
+        if((position[i][j] == 'x' && position[i + 1][j] == 'x' && position[i + 2][j] == 'x') || (position[i][j] == 'o' && position[i + 1][j] == 'o' && position[i + 2][j] == 'o')){
+   
+            if(position[i][j] == 'x')
+                winner.innerHTML = "O vencedor foi o X!";
+            else
+                winner.innerHTML = "O vencedor foi o O!";
+        }
+    }
+    if((position[0][0] == 'x' && position[0 + 1][0 + 1] == 'x' && position[0 + 2][0 + 2] == 'x') || (position[0][0] == 'o' && position[0 + 1][0 + 1] == 'o' && position[0 + 2][0 + 2] == 'o')){
+        if(position[0][0] == 'x')
+            winner.innerHTML = "O vencedor foi o X!";
+        else
+            winner.innerHTML = "O vencedor foi o O!";
+    }
+    if((position[0][2] == 'x' && position[0 + 1][2 - 1] == 'x' && position[0 + 2][2 - 2] == 'x') || (position[0][2] == 'o' && position[0 + 1][2 - 1] == 'o' && position[0 + 2][2 - 2] == 'o')){
+        if(position[0][2] == 'x')
+            winner.innerHTML = "O vencedor foi o X!";
+        else
+            winner.innerHTML = "O vencedor foi o O!";
     }
 }
 function restart(){
