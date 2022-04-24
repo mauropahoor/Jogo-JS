@@ -1,18 +1,8 @@
-header{
-    height: auto;
-    font-size: 4rem;
-}
-header.secondary{
-    font-size: 2rem;
-}
-.content{
-    font-size: 2.8rem;
+.responsive {
+    max-width: 100%;
     height: auto;
 }
-h1,h2,h3,h4,h5,h6{
-    font-size: 3.2rem;
-}
-.btn{
-    padding: 0.938rem 2rem;
-    font-size: 2rem;
+table{
+    width: auto;
+    margin: 0% 10% 0% 10%;
 }

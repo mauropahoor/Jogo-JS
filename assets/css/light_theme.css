@@ -13,8 +13,8 @@ footer{
     background-color: #01497c;
     color: white;
 }
-.content.style{
+div.style{
     background-color: #012a4a;
     color: white;
 }
-.fit.style{background-color: #022642}
+.fit.style{background-color: #022642;}

@@ -15,3 +15,7 @@ header.secondary{
     padding: 10px;
     text-align: left;
 }
+table{
+    margin: auto;
+    height: auto;
+}

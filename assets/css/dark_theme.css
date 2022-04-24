@@ -13,10 +13,8 @@ footer{
     background-color: #332940;
     color: white;
 }
-.content.style{
+div.style{
     background-color: #242424;
     color: white;
 }
-input{
-    accent-color: #332940;
-}
+.fit.style{background-color: #1f1f1f;}
