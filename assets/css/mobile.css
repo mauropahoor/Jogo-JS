@@ -1,3 +1,11 @@
+header{
+    height: auto;
+    font-size: 3rem;
+}
+header.secondary{
+    height: auto;
+    font-size: 1rem;
+}
 .responsive {
     max-width: 100%;
     height: auto;
@@ -5,4 +13,7 @@
 table{
     width: auto;
     margin: 0% 10% 0% 10%;
+}
+svg{
+    width: 1rem;
 }

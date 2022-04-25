@@ -6,6 +6,10 @@ header.secondary{
     height: auto;
     font-size: 1.1rem;
 }
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
 .content{
     margin-right: 30%;
     margin-left: 30%;
@@ -18,4 +22,7 @@ header.secondary{
 table{
     margin: auto;
     height: auto;
+}
+svg{
+    width: 1.25rem;
 }
